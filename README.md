@@ -5,7 +5,7 @@ Este repositorio contiene dos versiones del mismo ejercicio de validación de fo
 - **JavaScript Vanilla** → Carpeta `Validacion-Vanilla`
 - **jQuery** → Carpeta `Validacion-JQuery`
 
-Ambas versiones comparten el mismo formulario (`2.html`) y estructura base, pero difieren en la forma en que gestionan los eventos y manipulan el DOM.
+Ambas versiones comparten el mismo formulario (`formulario 2.html`) y estructura base, pero difieren en la forma en que gestionan los eventos y manipulan el DOM.
 
 ---
 
@@ -53,7 +53,7 @@ Implementar un sistema de validación de formularios para una **reserva de hotel
 |------------------------|----------------------|
 | Nombre / Apellido      | Solo letras y espacios |
 | Email                  | Formato válido (`usuario@dominio.com`) |
-| Teléfono               | Solo números, exactamente 10 dígitos |
+| Teléfono               | Solo números, exactamente 11 dígitos |
 | Pasaporte              | Alfanumérico, 8–9 caracteres |
 | País de origen         | Obligatorio |
 | Fecha de llegada       | No puede ser menor que hoy |
@@ -77,14 +77,14 @@ Implementar un sistema de validación de formularios para una **reserva de hotel
 | Manipulación de clases        | `classList.toggle()`                | `.toggleClass()`                    |
 | Validaciones                  | Funciones puras en `validaciones.js` | Reutilizadas sin cambios            |
 | Modularidad                   | Separación clara                    | Conservada                          |
-| Librerías externas            | Ninguna                             | jQuery (`lib/jquery.min.js`)        |
+| Librerías externas            | Ninguna                             | jQuery (`lib/jquery-3.7.1.min.js`)        |
 
 ---
 
 ## 🚀 Cómo ejecutar
 
 1. Clona el repositorio.
-2. Abre `2.html` desde cualquiera de las carpetas (`Validacion-Vanilla` o `Validacion-JQuery`) en tu navegador.
+2. Abre `formulario 2.html` desde cualquiera de las carpetas (`Validacion-Vanilla` o `Validacion-JQuery`) en tu navegador.
 3. Completa el formulario y prueba los casos:
    - Campos vacíos o inválidos → borde rojo y alerta.
    - Datos válidos → alerta de éxito y formulario reseteado.
@@ -101,7 +101,7 @@ Implementar un sistema de validación de formularios para una **reserva de hotel
 
 ## 👨‍💻 Autor
 
-Práctica desarrollada por **Fabrizio** como parte de la evaluación de **Programación II**, con enfoque en modularidad, claridad, escalabilidad y control quirúrgico sobre la interacción UI.
+Práctica desarrollada por **Fabrizio** como parte de la evaluación de **Electiva II**, con enfoque en modularidad, claridad, escalabilidad y control quirúrgico sobre la interacción UI.
 
 ---
 
