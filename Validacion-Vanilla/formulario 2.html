@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 2 - Reserva de Hotel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      padding: 20px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: auto;
+      background-color: #1e1e1e;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .form-label {
+      color: #cfcfcf;
+    }
+
+    .form-control {
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border: 1px solid #444;
+    }
+
+    .form-control::placeholder {
+      color: #aaaaaa;
+    }
+
+    .form-control:focus {
+      background-color: #2c2c2c;
+      color: #ffffff;
+      border-color: #66afe9;
+      box-shadow: 0 0 0 0.2rem rgba(102, 175, 233, 0.25);
+    }
+
+    select.form-control {
+      background-color: #2c2c2c;
+      color: #ffffff;
+    }
+
+    .btn-success {
+      background-color: #4caf50;
+      border-color: #4caf50;
+    }
+
+    .btn-success:hover {
+      background-color: #45a049;
+      border-color: #45a049;
+    }
+
+    h2 {
+      color: #ffffff;
+    }
+
+    .invalido {
+    border-color: #ff4d4d !important;
+    box-shadow: 0 0 0 0.2rem rgba(255, 77, 77, 0.25);
+  }
+
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="mb-4">Reserva de Hotel</h2>
+    <form id="form2">
+      <!-- 1. Nombre: solo letras -->
+      <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" placeholder="Solo letras">
+      </div>
+
+      <!-- 2. Apellido: solo letras -->
+      <div class="mb-3">
+        <label class="form-label">Apellido</label>
+        <input type="text" class="form-control" id="apellido" placeholder="Solo letras">
+      </div>
+
+      <!-- 3. Email: formato válido -->
+      <div class="mb-3">
+        <label class="form-label">Correo Electrónico</label>
+        <input type="email" class="form-control" id="email" placeholder="ejemplo@dominio.com">
+      </div>
+
+      <!-- 4. Teléfono: solo números, 11 dígitos -->
+      <div class="mb-3">
+        <label class="form-label">Teléfono</label>
+        <input type="text" class="form-control" id="telefono" placeholder="10 dígitos numéricos">
+      </div>
+
+      <!-- 5. Número de Pasaporte: formato alfanumérico -->
+      <div class="mb-3">
+        <label class="form-label">Número de Pasaporte</label>
+        <input type="text" class="form-control" id="pasaporte" placeholder="Ejemplo: A1234567">
+      </div>
+
+      <!-- 6. País de origen: obligatorio -->
+      <div class="mb-3">
+        <label class="form-label">País de Origen</label>
+        <select class="form-control" id="pais">
+          <option value="">Seleccione</option>
+          <option>Venezuela</option>
+          <option>México</option>
+          <option>Colombia</option>
+          <option>Argentina</option>
+          <option>España</option>
+        </select>
+      </div>
+
+      <!-- 7. Fecha de llegada: no puede ser menor que hoy -->
+      <div class="mb-3">
+        <label class="form-label">Fecha de Llegada</label>
+        <input type="date" class="form-control" id="fechaLlegada">
+      </div>
+
+      <!-- 8. Fecha de salida: debe ser posterior a la de llegada -->
+      <div class="mb-3">
+        <label class="form-label">Fecha de Salida</label>
+        <input type="date" class="form-control" id="fechaSalida">
+      </div>
+
+      <!-- 9. Hora estimada de llegada: rango 12:00 a 23:59 -->
+      <div class="mb-3">
+        <label class="form-label">Hora Estimada de Llegada</label>
+        <input type="time" class="form-control" id="horaLlegada">
+      </div>
+
+      <!-- 10. Número de noches: solo números, mínimo 1 -->
+      <div class="mb-3">
+        <label class="form-label">Número de Noches</label>
+        <input type="number" class="form-control" id="noches" placeholder="Mínimo 1">
+      </div>
+
+      <!-- 11. Número de personas: solo números, entre 1 y 6 -->
+      <div class="mb-3">
+        <label class="form-label">Número de Personas</label>
+        <input type="number" class="form-control" id="personas" placeholder="Entre 1 y 6">
+      </div>
+
+      <!-- 12. Tipo de habitación: obligatorio -->
+      <div class="mb-3">
+        <label class="form-label">Tipo de Habitación</label>
+        <select class="form-control" id="habitacion">
+          <option value="">Seleccione</option>
+          <option>Individual</option>
+          <option>Doble</option>
+          <option>Suite</option>
+        </select>
+      </div>
+
+      <!-- 13. Número de tarjeta de crédito: 16 dígitos -->
+      <div class="mb-3">
+        <label class="form-label">Número de Tarjeta de Crédito</label>
+        <input type="text" class="form-control" id="tarjeta" placeholder="16 dígitos">
+      </div>
+
+      <!-- 14. CVV: 3 dígitos -->
+      <div class="mb-3">
+        <label class="form-label">CVV</label>
+        <input type="text" class="form-control" id="cvv" placeholder="3 dígitos">
+      </div>
+
+      <!-- 15. Código promocional: opcional, máximo 10 caracteres -->
+      <div class="mb-3">
+        <label class="form-label">Código Promocional</label>
+        <input type="text" class="form-control" id="promocional" placeholder="Máximo 10 caracteres">
+      </div>
+
+      <button type="submit" class="btn btn-success">Reservar</button>
+    </form>
+  </div>
+  <script type="module" src="./js/index.js"></script>
+</body>
+</html>
